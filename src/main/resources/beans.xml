@@ -10,9 +10,13 @@
     <bean id="email" class="pl.coderslab.beans.EmailService"/>
 
 <!--    <bean id="emailService" class="pl.coderslab.beans.EmailService"/>-->
-    <bean id="messageService" class="pl.coderslab.beans.EmailService"/>
+    <bean id="messageService" class="pl.coderslab.beans.EmailService">
+<!--        <property name="message" value="Message from xml"/>-->
+    </bean>
     <bean id="messageSender" class="pl.coderslab.beans.MessageSender">
 <!--        <constructor-arg ref="emailService"/>-->
-        <constructor-arg ref="messageService"/>
+        <constructor-arg ref="messageService" />
+        <constructor-arg value="Message from xml"/>
+<!--        <property name="message" value="Message from xml"/>-->
     </bean>
 </beans>
