@@ -8,6 +8,9 @@ public class HelloWorld {
         this.message = message;
     }
 
+    public HelloWorld() {
+    }
+
     public String getMessage() {
         return message;
     }
